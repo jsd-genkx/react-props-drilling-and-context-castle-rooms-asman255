@@ -1,4 +1,4 @@
-import { Level02 } from "./Level02"
+import { Level02 } from "./level02"
 export default function Level01({ message1, handleReply }) {
     return (
         <>
