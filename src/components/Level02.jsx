@@ -1,8 +1,8 @@
 import { Level03 } from "./level03"
-export function Level02({ message1, handleReply }) {
+export function Level02() {
     return (
         <>
-            <Level03 message2={message1} handleReply={handleReply} />
+            <Level03 />
         </>
     )
 }

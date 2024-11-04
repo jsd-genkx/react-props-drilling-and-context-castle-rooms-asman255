@@ -1,6 +1,15 @@
-import { useState } from "react";
-export function Level03({ message1, handleReply }) {
+import { useState, createContext, useContext } from "react";
+
+export const Usercontext = createContext();
+export function Level03({ message1 }) {
+    
     const [reply, setReply] = useState("");
+    const handleReply = () => {
+        // Update the context here
+        userContext.value = reply
+        alert("Reply sent!")
+        console.log("test")
+    }
     return (
         <div>
             Level03
@@ -13,7 +22,7 @@ export function Level03({ message1, handleReply }) {
             />
             <button
                 className="mt-4 px-4 py-2 bg-blue-500 text-white rounded"
-                onClick={() => handleReply(reply)}
+                onClick={() => { handleReply }}
             >
                 Send Reply
             </button>
